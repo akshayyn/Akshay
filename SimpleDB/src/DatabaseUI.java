@@ -1,38 +1,46 @@
 import java.util.Scanner;
 
+/**This class acts like a front End Controller
+ * Takes Command from the Console/File with commands
+ * Parses the command and passes to main Database class 
+ * to perform operations
+ * Supported Trasaction operations- BEGIN,ROLLBACK,END
+ * Supported data transactions SET,GET.UNSET,NUMEQUALTO*/
+
 
 public class DatabaseUI {
 	public static void main(String[] args) {
 		Database db = new Database(new TransactionHelper());
+		System.out.println("Welcome to In-memory Database System");
 		Scanner scanner = new Scanner(System.in);
-		scanner.useDelimiter("\\s+"); // space delimited
-		String cmdLine; // cmdLine is typically 'cmd' followed by 'key' followed by 'value'
+		scanner.useDelimiter("\\s+"); // delimiter- <Space>
+		String commandLine;
 		while (scanner.hasNextLine()) {
-			cmdLine = scanner.nextLine();
-			String[] tokens = cmdLine.split("\\s+");
-			String cmd = tokens[0];
+			commandLine = scanner.nextLine();
+			String[] commandArray = commandLine.split("\\s+");
+			String command = commandArray[0];
 			String name;
 			Integer value;
 			try {
-				switch (cmd) {
+				switch (command) {
 				case "GET":
-					name = tokens[1];
+					name = commandArray[1];
 					
 					System.out.println(db.getValue(name) != null ? db.getValue(name):"NULL");
 					break;
 				case "SET":
-					name = tokens[1];
-					value = Integer.parseInt(tokens[2]);
+					name = commandArray[1];
+					value = Integer.parseInt(commandArray[2]);
 					db.setValue(name, value);
 					
 					break;
 				case "UNSET":
-					name = tokens[1];
+					name = commandArray[1];
 					db.unsetValue(name);
 					
 					break;
 				case "NUMEQUALTO":
-					value = Integer.parseInt(tokens[1]);
+					value = Integer.parseInt(commandArray[1]);
 					System.out.println(db.numberOfValues(value));
 					break;
 				case "BEGIN":
@@ -50,12 +58,12 @@ public class DatabaseUI {
 				case "":
 					break;
 				default:
-					System.out.println("Invalid command: " + cmd );
+					System.out.println("Invalid command: " + command );
 				}
 			} catch (NumberFormatException e) {			// SET n a
-				System.out.println("Invalid number format: " + cmdLine );
+				System.out.println("Invalid number format: " + commandLine );
 			} catch (ArrayIndexOutOfBoundsException e) {// GET
-				System.out.println("Possibly missing operand: " + cmdLine );
+				System.out.println("Missing Operand: " + commandLine );
 			}
 		}
 		scanner.close();
