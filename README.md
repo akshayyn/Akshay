@@ -24,8 +24,11 @@ GET
 
 For transactions such as BEGIN,COMMIT, ROLLBACK and END i have implmented Memento patter with a Stack which will hold all the save points(i.e Memento objects) 
 -BEGIN- new save point will be created and pushed to Stack
--COMMIT Stack will be cleared(
+
+-COMMIT Stack will be cleared
+
 -ROLLBACK-Latest Save point Memento object popped from the stack and Database restored to original state before recent transaction
+
 -END- IF the stack is non-empty(i.e some transactions are not commited yet , DB will be restored to original state by setting maps to first save point values)
 
 To run the solution in interactive mode:
