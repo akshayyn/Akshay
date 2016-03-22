@@ -1,7 +1,7 @@
 import java.util.Stack;
 
 public class TransactionHelper {
-	public Stack<Memento> transactionStack;
+	private final Stack<Memento> transactionStack;
 
 	public TransactionHelper() {
 		this.transactionStack = new Stack<Memento>();
@@ -25,14 +25,6 @@ public class TransactionHelper {
 	
 	public Memento getOriginalState(){
 		return transactionStack.firstElement();
-	}
-
-	public Stack<Memento> getTransactionStack() {
-		return transactionStack;
-	}
-
-	public void setTransactionStack(Stack<Memento> transactionStack) {
-		this.transactionStack = transactionStack;
 	}
 	
 	public boolean activeTransaction(){

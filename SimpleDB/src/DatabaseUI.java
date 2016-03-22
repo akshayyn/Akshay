@@ -45,6 +45,7 @@ public class DatabaseUI {
 					if (!db.commit()) System.out.println("NO TRANSACTION");
 					break;					
 				case "END":
+					db.end();
 					return;
 				case "":
 					break;
