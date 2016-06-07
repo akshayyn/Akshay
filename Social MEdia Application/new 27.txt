@@ -1,0 +1,15 @@
+Web Services
+A website for another application not for humans
+Eg Neu.Edu>>>(tracking number)>>>Fedex.com
+Fedex >>>(Tracking info)>>>NEu.edu
+
+SOAP(Simple Object Access Protocol)
+XML
+WSDL
+----------------
+REST(RESTful Service)
+HTTP
+XML - JSON`
+ss
+Spring HATEOS(simplify REST)
+RestTemolate class

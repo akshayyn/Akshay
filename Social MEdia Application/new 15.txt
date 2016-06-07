@@ -1,0 +1,6 @@
+<!--
+            <!--<c:forEach items="$(sessionScope.myCourseList}" var="item">
+                CRN:${item.crn}
+                Course Name: ${item.name}
+                <a href='removeCourse.htm?action=remove&crn=${item.crn}'>Remove Course</a>
+            </c:forEach>--!>

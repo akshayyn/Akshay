@@ -1,0 +1,18 @@
+Paging & segmentation
+2 populate memory from disk
+to provide protection from other programs(no one shud modify the data of other program)
+
+segmentation-(per program)
+0-500 instructions
+501-5000-data
+5001-xyz-heap etc
+major problem-
+1000 loc program---300 shud b data-if u r using only 10 - u are wasting 290 locations(fragmentation(seg vs paging flaw)
+
+
+
+
+-----------Paging--------
+suppose memory 4kb
+program of 1kb
+page 250 bytes

@@ -1,0 +1,178 @@
+CHAPTER6
+
+Question1.
+<!DOCTYPE html>
+<html>
+<head>
+<title>Question 1</title>
+<script type="text/javascript">
+function displayLinks()
+{
+ var linksCounter;
+ for (linksCounter = 0; linksCounter < document.links.length;
+linksCounter++)
+{
+alert(document.links[linksCounter].href);
+}
+ }
+</script>
+</head>
+<body onload="displayLinks()">
+<a href="link0.htm" >Link 0</a>
+<a href="link1.htm">Link 2</a>
+<a href="link2.htm">Link 2</a>
+</body>
+</html>
+
+---------------------------------------------------------------
+Question2.
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Question 2</title>
+ <script>
+ function getBrowserName()
+ {
+ var browserName = navigator.userAgent;
+ if (browserName.indexOf("MSIE") >= 0)
+ {
+ browserName = "MSIE";
+ }
+ else if (browserName.indexOf("Firefox") >= 0)
+ {
+ browserName = "Firefox";
+ }
+ else if (browserName.indexOf("Chrome") >= 0)
+ {
+ browserName = "Chrome";
+ }
+ else if (browserName.indexOf("Safari") >= 0)
+ {
+ browserName = "Safari";
+ }
+ else if (browserName.indexOf("Opera") >= 0)
+ {
+ browserName = "Opera";
+ }
+ else
+ {
+ browserName = "UNKNOWN";
+ }
+ return browserName;
+ }
+ function getBrowserVersion()
+ {
+var findIndex;
+ var browserVersion = 0;
+ var browser = getBrowserName();
+ browserVersion = navigator.userAgent;
+ findIndex = browserVersion.indexOf(browser) + browser.length + 1;
+ browserVersion = parseFloat(browserVersion.substring(findIndex,
+ findIndex + 3));
+
+ return browserVersion;
+ }
+
+ function checkBrowser()
+ {
+ if (getBrowserName() == "MSIE")
+ {
+ window.location.replace("ieonly.htm");
+ }
+ }
+ </script>
+</head>
+<body onload="checkBrowser()">
+<h2>Welcome to the Not-IE only page</h2>
+</body>
+</html>
+
+
+Page two—
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Question 2</title>
+ <script>
+ function getBrowserName()
+ {
+ var browserName = navigator.userAgent;
+ if (browserName.indexOf("MSIE") >= 0)
+ {
+ browserName = "MSIE";
+ }
+ else if (browserName.indexOf("Firefox") >= 0)
+ {
+ browserName = "Firefox";
+ }
+ else if (browserName.indexOf("Chrome") >= 0)
+ {
+ browserName = "Chrome";
+ }
+ else if (browserName.indexOf("Safari") >= 0)
+ {
+ browserName = "Safari";
+ }
+25937bapp01.indd 607 9/20/09 12:20:20 AM
+608
+Appendix A: Answers to Exercises
+ else if (browserName.indexOf("Opera") >= 0)
+ {
+ browserName = "Opera";
+ }
+ else
+ {
+ browserName = "UNKNOWN";
+ }
+ return browserName;
+ }
+ function getBrowserVersion()
+ {
+ var findIndex;
+ var browserVersion = 0;
+ var browser = getBrowserName();
+ browserVersion = navigator.userAgent;
+ findIndex = browserVersion.indexOf(browser) + browser.length + 1;
+ browserVersion = parseFloat(browserVersion.substring(findIndex,
+ findIndex + 3));
+
+ return browserVersion;
+ }
+
+ function checkBrowser()
+ {
+ if (getBrowserName() != "MSIE")
+ {
+ window.location.replace("notieonly.htm");
+ }
+ }
+ </script>
+</head>
+<body onload="checkBrowser()">
+<h2>Welcome to the Internet Explorer only page</h2>
+</body>
+</html>
+
+------------------------------------------------------------------------------------------------------
+Question3:
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Question 3</title>
+ <script>
+ function mouseOver(that)
+ {
+ that.src = "Img2.jpg";
+ }
+ function mouseOut(that)
+ {
+ that.src = "Img1.jpg";
+ }
+ </script>
+</head>
+<body>
+<img src="Img1.jpg" name="myImage" onmouseover="mouseOver(this)"
+ onmouseout="mouseOut(this)" />
+</body>
+</html>

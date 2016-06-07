@@ -1,0 +1,37 @@
+*{
+	background-color  : #EFEFEF;
+}
+div>header{
+	background-color  : #DFDFDF;
+}
+a+nav{
+	background-color  : #DFDFDF;
+}
+a[target] {
+    color: cyan;
+}
+a[target=none] {
+    background-color: orange;
+}
+a[a~=link] {
+    background-color: #FFFF99;
+}
+[lang|=en] {
+    background: yellow;
+}
+p::before{
+	content : "begins.........";
+}
+p::after{
+	content : "ends.......";
+}
+div #d2{
+	clear  :left;
+}
+p:first-child{
+	color : blue;
+	
+}
+input:focus{
+background-color : yellow;
+}

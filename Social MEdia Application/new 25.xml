@@ -1,0 +1,18 @@
+<hibernate-mapping>
+<class name='x' table = "x">
+<id type = 'int' column ="id">
+<generator class="native" />
+</id>
+<property name = "age" type = "String" column = "ageCol"/>
+</class>
+</hibernate-mapping>
+
+<session-factory>
+<property name="hibernate.connection.url>
+xyz</property>
+<property name="hibernate.connection.driver_Class">
+org.hsql.jdbcDriver</property>
+<property name="hibernate.connection.userName">s</property>
+<property name="hibernate.connection.password">s</property>
+<property name="hibernate.connection.poolSize">2</property
+<property name="hibernate.Dialect">org.hsqlDialect</property>

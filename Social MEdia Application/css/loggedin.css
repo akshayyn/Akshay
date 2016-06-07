@@ -1,0 +1,22 @@
+#messagesTable tr{
+	border : 1px solid grey ;
+	padding : 20px;
+}
+#messagesTable td,th{
+	padding : 20px;
+	
+}
+#messagesTable thead{
+	background-color : #efefef;
+	
+}
+#messagesTable{
+	width : 700px;
+	margin-left : 20px;
+cellpadding : 20px;
+overflow-y: auto;
+        }
+div.panel{
+	margin-top : 40px;
+}		
+		

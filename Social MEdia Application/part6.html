@@ -1,0 +1,231 @@
+<html>
+<head>
+<title>part3</title>
+	<link rel='stylesheet' href='part3.css'>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+function checkBoxAction(element){
+
+ $($("input:checked").parents()[1]).addClass("active");
+}
+
+
+$(document).ready(function() {
+$("span[class$='down']").click(function(){
+if(this.className.includes('down')){
+$($($(this).parents()[2]).next()).css("display", "initial");
+$(this).removeClass('glyphicon glyphicon-chevron-down');
+$(this).addClass('glyphicon glyphicon-chevron-up');
+}else{
+$($($(this).parents()[2]).next()).css("display", "none");
+$(this).removeClass('glyphicon glyphicon-chevron-up');
+$(this).addClass('glyphicon glyphicon-chevron-down');
+}
+});
+
+});
+
+
+
+/**if(element.className.includes('down')){
+element.parentNode.parentNode.parentNode.nextSibling.nextSibling.style.display = 'initial';
+element.parentNode.parentNode.parentNode.nextSibling.nextSibling.childNodes[1].colspan= 8;
+element.className = 'glyphicon glyphicon-chevron-up';
+}else{
+element.parentNode.parentNode.parentNode.nextSibling.nextSibling.style.display = 'none';
+element.className = 'glyphicon glyphicon-chevron-down';
+}
+}*/
+</script>
+</head>
+<body>
+<h2>Sample Application</h2>
+<div class='container'>
+<table class='table'>
+<thead>
+<tr class="success">
+<td></td>
+<td>Student</td>
+<td>Advisor</td>
+<td>award status</td>
+<td>Semester</td>
+<td>Type</td>
+<td>Budget</td>
+<td>Percentage</td>
+</tr></thead>
+<tr>
+<td><input type='checkbox' class='checkBox' onclick='checkBoxAction(this.parentNode)'>
+<p><span class='glyphicon glyphicon-chevron-down' ></span></td>
+<td>Akshay<p>nuid:001665899</p></td>
+<td>Advisor  : Joe Brown
+<p>Dept : chem</p>
+</td>
+<td>approved</td>
+<td>Summer
+<p>1*2015</p></td>
+<td>TA</td>
+<td>12555</td>
+<td>100%</td>
+</tr>
+<tr id='details'>
+<td colspan='8'>
+<h5>Advisor</h5>
+<p>Joe Brown</p>
+<h5>Award Details:</h5>
+<p>Celbrating success in research and studies.<p>
+<ul>
+<li>Summer 2014<<li>
+<li>Budget number<span class='glyphicon glyphicon-pencil' data-toggle="modal" data-target="#Modal"></span><li>
+<li>Tuition Number<span class='glyphicon glyphicon-pencil' data-toggle="modal" data-target="#Modal2"></span><li>
+</ul>
+</br>
+<h5>Comments</h5>
+</br>
+<h5>Award Status</h5>
+</td>
+</tr>
+<tr>
+<td><input type='checkbox' class='checkBox' onclick='checkBoxAction(this.parentNode)'>
+<p><span class='glyphicon glyphicon-chevron-down' ></span></td>
+<td>Akshay<p>nuid:001665899</p></td>
+<td>Advisor  : Joe Brown
+<p>Dept : chem</p>
+</td>
+<td>approved</td>
+<td>Summer
+<p>1*2015</p></td>
+<td>TA</td>
+<td>12555</td>
+<td>100%</td>
+</tr>
+<tr id='details'>
+<td colspan='8'>
+<h5>Advisor</h5>
+<p>Joe Brown</p>
+<h5>Award Details:</h5>
+<p>Celbrating success in research and studies.<p>
+<ul>
+<li>Summer 2014<<li>
+<li>Budget number<span class='glyphicon glyphicon-pencil' data-toggle="modal" data-target="#Modal"></span><li>
+<li>Tuition Number<span class='glyphicon glyphicon-pencil' data-toggle="modal" data-target="#Modal2"></span><li>
+</ul>
+</br>
+<h5>Comments</h5>
+</br>
+<h5>Award Status</h5>
+</td>
+</tr>
+<tr>
+<td><input type='checkbox' class='checkBox' onclick='checkBoxAction(this.parentNode)'>
+<p><span class='glyphicon glyphicon-chevron-down' ></span></td>
+<td>Akshay<p>nuid:001665899</p></td>
+<td>Advisor  : Joe Brown
+<p>Dept : chem</p>
+</td>
+<td>approved</td>
+<td>Summer
+<p>1*2015</p></td>
+<td>TA</td>
+<td>12555</td>
+<td>100%</td>
+</tr>
+<tr id='details'>
+<td colspan='8'>
+<h5>Advisor</h5>
+<p>Joe Brown</p>
+<h5>Award Details:</h5>
+<p>Celbrating success in research and studies.<p>
+<ul>
+<li>Summer 2014<<li>
+<li>Budget number<span class='glyphicon glyphicon-pencil' data-toggle="modal" data-target="#Modal"></span><li>
+<li>Tuition Number<span class='glyphicon glyphicon-pencil' data-toggle="modal" data-target="#Modal2"></span><li>
+</ul>
+</br>
+<h5>Comments</h5>
+</br>
+<h5>Award Status</h5>
+</td>
+</tr>
+<tr id='details'>
+<td colspan='8'>
+<h5>Advisor</h5>
+<p>Joe Brown</p>
+<h5>Award Details:</h5>
+<p>Celbrating success in research and studies.<p>
+<ul>
+<li>Summer 2014<<li>
+<li>Budget number<span class='glyphicon glyphicon-pencil' data-toggle="modal" data-target="#Modal"></span><li>
+<li>Tuition Number<span class='glyphicon glyphicon-pencil' data-toggle="modal" data-target="#Modal2"></span><li>
+</ul>
+</br>
+<h5>Comments</h5>
+</br>
+<h5>Award Status</h5>
+</td>
+</tr>
+<tr id='details'>
+<td colspan='8'>
+<h5>Advisor</h5>
+<h5>Award Details</h5>
+<ul>
+<li>Summer 2014<li>
+<li>Budget number<li>
+<li>Tuition Number<li>
+</ul>
+</br>
+<h5>Comments</h5>
+</br>
+<h5>Award Status</h5>
+</td>
+</tr>
+</table>
+
+</div>
+ 
+  <div class="modal fade" id="Modal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Change Budget Number</h4>
+        </div>
+        <div class="modal-body">
+          <p>New Budget Number : <input type="text"/></p>
+        </div>
+        <div class="modal-footer">
+        	<button type="button" class="btn btn-default" data-dismiss="modal">Change Budget Number</button>	
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="modal fade" id="Modal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Change Tuition Number</h4>
+        </div>
+        <div class="modal-body">
+          <p>New Tuition Number : <input type="text"/></p>
+        </div>
+        <div class="modal-footer">
+        	<button type="button" class="btn btn-default" data-dismiss="modal">Change Tuition Number</button>	
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</body>
+</html>

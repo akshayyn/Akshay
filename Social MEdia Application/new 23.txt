@@ -1,0 +1,11 @@
+Address translation mechanism
+for virtual memory to ohsical memory mapping
+page table
+virtual address-main address-main
+
+but if we use this apraoch every time processor has to ciome to ram for finding physical addresss soi that it can take from ram if its not there in cache
+make another cache
+TLB
+recent mapping kept in cache
+
+0

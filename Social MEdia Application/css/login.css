@@ -1,0 +1,37 @@
+
+
+body {
+	 background-image: url("rom.jpg");
+    background-color: #cccccc;
+}
+
+.container {	
+	margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.form-signin {
+  max-width: 510px;
+  padding: 15px 35px 45px;
+  margin-bottom: 50px;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1); 
+	opacity : 0.88;
+}
+  
+
+		[type="text"] {
+	  margin-bottom: 20px;
+	  border-bottom-left-radius: 0;
+	  border-bottom-right-radius: 0;
+	}
+
+	input[type="password"] {
+	  margin-bottom: 30px;
+	  border-top-left-radius: 0;
+	  border-top-right-radius: 0;
+	}
+
+#responseDiv{
+color : red;
+}

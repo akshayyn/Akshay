@@ -1,0 +1,31 @@
+pipeline-(single processor)
+Fetch-load-execute
+Types of dependancies
+Structural dependancy-when we ewanna store instruction anda data in diff memory(hw depend)
+Data dependancies-previous step dependancy(a+b so we cant prpoceed with a+b till a and b is loaded)
+control dependancy(fetch,decode-for conditional looping
+
+
+techniques to make it fast
+branch prediction(predoct loops) that this loop will a branch(jump)
+
+
+Cache-(cache hit founbd data from cache/cache miss didnt find data/miss penalty (time for taking from main memory)
+suppose 100000 ram and 1000 memory
+Tyoes of mapping
+Full associative(any data anywhere)-disadvt upto 1000 cycles every access(advantage if u want to access 0 10000 again n again(just 2 cycles)
+direct map-Divide ram into sections and each location of cache will point to 0..1000.200......99000(so every tim only one cycle)
+two way set(keep 2 set data in each loc of cache)
+four way(keep 4 at any loc at cache)
+
+Further betterment - make 2 cache instead of one
+L1 cache 256kb
+L2 cache
+
+
+Policies for freeing cache
+0 1000 2000
+FIFO
+suppose u have space for 2 every locati
+Least frequently used
+Least recently used

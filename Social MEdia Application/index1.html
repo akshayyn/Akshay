@@ -1,0 +1,87 @@
+<html>
+<head>
+	<title>CSE220 Final Project</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<center>
+
+<form method='POST' >
+<table border=1 cellpadding=5 cellspacing=5 width="796">
+<tr>
+   <td colspan="4" width="768">
+   <img src='images/top.jpg' width="768" height="253"></td>
+</tr>
+
+<tr>
+   <td width="118">User Name: </td>
+   <td width="161" align="center">
+   <input type=text id="user" name="user" size="20" tabindex="1"></td>
+   <td rowspan="2" width="137" align="center">
+   <input type=submit onclick="doRequestUsingPOST(); value="Member Login" size="20" tabindex="3"></td>
+   <td rowspan="2" width="334" align="right">
+      Millions of member profiles.<br>
+      Thousands more joining each day.<br>
+      <a href="register_01.jsp">Click Here</a> to join now. 
+   </td>
+</tr>
+
+<tr>
+   <td width="118">Password:&nbsp; &nbsp; </td>
+   <td width="161" align="center">
+   <input type=password id="pass" name="password" size="20" tabindex="2"></td>
+   <p id="serverResponse">nj</p>
+</tr>
+
+</table>
+</form>
+ 
+
+
+
+</center>
+<script type="text/javascript">
+var xmlHttp;
+function createXMLHttpRequest() {
+if (window.ActiveXObject) {
+xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+}
+else if (window.XMLHttpRequest) {
+xmlHttp = new XMLHttpRequest();
+}
+}
+function createQueryString() {
+var user = document.getElementById("user").value;
+var pass = document.getElementById("pass").value;
+
+var queryString = "user=" + user + "&pass=" + pass;
+return queryString;
+}
+function doRequestUsingPOST() {
+createXMLHttpRequest();
+var url = "GetAndPostExample?timeStamp=" + new Date().getTime();
+var queryString = createQueryString();
+xmlHttp.open("POST", "login.jsp", true);
+xmlHttp.onreadystatechange = handleStateChange;
+xmlHttp.setRequestHeader("Content-Type",
+"application/x-www-form-urlencoded;");
+xmlHttp.send(queryString);
+}
+
+function handleStateChange() {
+if(xmlHttp.readyState == 4) {
+if(xmlHttp.status == 200) {
+document.getElementById("serverResponse").innerHTML = xmlHttp.responseText;
+alert(xmlHttp.responseText);
+}
+}
+}
+
+
+</script>
+</body>
+</html>

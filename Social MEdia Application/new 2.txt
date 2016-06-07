@@ -1,0 +1,22 @@
+<div class='c6'>
+<ul>
+<li><h4 class='r6heads'>Events</h4></li>
+<li class='eventLi'>Oct14 : <a href='https://events.stanford.edu/events/544/54495/'>Planet Earth Arts News></a></li>
+<li class='eventLi'>Oct14 :<a href='https://events.stanford.edu/events/548/54891/'>Concert: CBG Organ Trio</a></li>
+<li class='eventLi'>Oct15 :<a href='https://events.stanford.edu/events/550/55089/'>Talk:Refugees on the Berlin Stage Today</a></li>
+</ul>
+</div>
+<div class='c6'>
+<ul>
+<li class='ath'><h4 class='r6heads'>Athletics</h4></li>
+<li class='ath'>
+<div id='athTxt'>
+<div id='football'><img src='football.png'></div>
+<p>
+<a href='http://www.gostanford.com/ViewArticle.dbml?DB_OEM_ID=30600&ATCLID=210405487'>Prime-time-faceoff</a>
+<p>The Cardinal will play UCLA at 7:30 p.m. on Thursday at Stanford Stadium.</p>
+</div>
+
+</li>
+</ul>
+</div>

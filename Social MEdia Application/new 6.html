@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>part3</title>
+	<link rel='stylesheet' href='Q3.css'>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script>
+ function show(Hide2)
+  {
+  	if(document.getElementById(Hide2).style.display=="none")
+  	{
+  	document.getElementById(Hide2).style.display="block";
+ 	 }
+ 	 else
+  	{
+ 	 document.getElementById(Hide2).style.display="none";	
+ 	 }
+  }
+​
+  function color(Display2,check)
+  {
+  	if(document.getElementById(check).checked)
+  	{
+  		document.getElementById(Display2).setAttribute("style","background-color:#FEFFBD");
+  	}
+  	else
+  	{
+  		document.getElementById(Display2).setAttribute("style","background-color:white");	
+  	}
+  }
+​
+</script>
+</head>
+​
+<body>
+<table class="table-condensed table-bordered">
+	<tr>
+		<th></th>
+		<th>STUDENT</th>
+		<th>ADVISOR</th>
+		<th>AWARD STATUS</th>
+		<th>SEMESTER</th>
+		<th>TYPE</th>
+		<th>BUDGET#</th>
+		<th>PERCENTAGE</th>
+	</tr>
+	<tr id="Display1">
+		<td><input type="checkbox" id="check1" onclick="color('Display1','check1')"></br></br><img src="down.jpg" width="30px" height="30px" alt="down" onclick="show('Hide1')"/></td>
+		<td>Akshay<br/>NUID:0123</td>
+		<td>Joe Brown<br/>DEPT: CHME</td>		
+		<td>Approved</td>		
+		<td>Summer<br/>1-2014</td>		
+		<td>TA</td>								
+		<td>12345</td>				
+		<td>100%</td>				
+	</tr>
+	<tr id="Hide1" class="Hiderow">
+		<td  class="Hidetd" colspan="8">
+			Advisor:<br/><h4><b>Bhavik Vora</b></h4>
+			Award Details:	<img class="img1" src="pen.png" width="20px" height="20px" alt="pen" data-toggle="modal" data-target="#Modal"/> <br/><h6><b>Summer 1-2014</b></h6>
+			Comments: <img class="img1" src="pen.png" width="20px" height="20px" alt="pen" data-toggle="modal" data-target="#Modal"/><br/><h6><b>Congratulations</b></h6>
+			Award Status: <h3><b>Approved</b></h3>
+		</td>
+	</tr>
+		<tr id="Display2">
+		<td><input type="checkbox" id="check2" onclick="color('Display2','check2')"><br/><img src="down.jpg" width="30px" height="30px" alt="down" onclick="show('Hide2')"/></td>
+		<td>Tejas<br/>NUID:0124</td>
+		<td>Joe john<br/>DEPT: IT</td>		
+		<td>Approved</td>		
+		<td>Summer<br/>1-2014</td>		
+		<td>TA</td>								
+		<td>12335</td>				
+		<td>100%</td>				
+	</tr>
+	<tr id="Hide2" class="Hiderow">
+		<td  class="Hidetd" colspan="8">
+			Advisor: Juilee Jadhav<br/>
+			Award Details:	<img class="img1" src="pen.png" width="20px" height="20px" alt="pen" data-toggle="modal" data-target="#Modal"/><br/><h6><b>Summer 1-2014</b></h6>
+			Comments: <img class="img1" src="pen.png" width="20px" height="20px" alt="pen" data-toggle="modal" data-target="#Modal"/><br/><h6><b>Congratulations</b></h6>
+			Award Status: <h3><b>Approved</b></h3>
+		</td>
+	</tr>
+</table>
+​
+  <!-- Modal -->
+  <div class="modal fade" id="Modal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Change Budget Number</h4>
+        </div>
+        <div class="modal-body">
+          <p>New Budget Number : <input type="text"/></p>
+        </div>
+        <div class="modal-footer">
+        	<button type="button" class="btn btn-default" data-dismiss="modal">Change Budge Number</button>	
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+​
+</body>
+</html>

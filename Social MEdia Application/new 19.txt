@@ -1,0 +1,22 @@
+WebTools
+File Uploads-
+2 requirements
+1.<form method=...
+MUST be POST
+
+2. We need to specify enctpe to be<form method ='post' encytpe='multipart/form-data'>
+
+To read file-
+
+1. setBLOB(int parameterIndex, Blob x
+-BLOB-Binary Large Object < 65kb(x^16)
+
+-LONGBLOB < 4billion bytes(2^32)4gb  
+
+2. set file in directory and put file in DB
+
+SreingBuffer buffer = ........;
+while(rs.next()){
+buffer.append(rs.next());
+}
+SYSOUT(buffer.toString());

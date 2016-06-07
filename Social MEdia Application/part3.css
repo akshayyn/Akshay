@@ -1,0 +1,10 @@
+#details{
+display  :none;
+}
+h5{
+	color  :red;
+	font-weight : bold;
+}
+tr,td	{
+	border : 1px solid grey;
+}

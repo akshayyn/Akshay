@@ -1,0 +1,8 @@
+Web Design Lecture 7
+ CSS Specificity
+ 
+ Rules apply based on how specific is your slector...
+ rules may not apply if ur selector is not specific or some other selector is more specific in external sheet
+ 
+ Hierarchy of specificity(1important overrides any rule and hierarchy)
+ 1.Inline styling

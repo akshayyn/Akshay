@@ -1,0 +1,135 @@
+<html>
+<head>
+	<title>CSE220 Final Project</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/login.css">
+  
+</head>
+
+<body>
+<center>
+
+
+ <div class="wrapper">
+    <form  class="form-signin">      
+      <h2 class="form-signin-heading">Please login</h2>
+      <input type="text" class="form-control" id="user" name="user" placeholder="Username" required="" autofocus="" />
+      <input type="password" class="form-control" id="pass" name="password" placeholder="Password" required=""/>      
+      <p id="serverResponse">nj</p>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="doRequestUsingPOST();">Login</button>  
+	
+    </form>
+	
+  </div>
+
+
+
+</center>
+<script type="text/javascript">
+var xmlHttp;
+function createXMLHttpRequest() {
+if (window.ActiveXObject) {
+xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+}
+else if (window.XMLHttpRequest) {
+xmlHttp = new XMLHttpRequest();
+}
+}
+function createQueryString() {
+var user = document.getElementById("user").value;
+var pass = document.getElementById("pass").value;
+
+var queryString = "user=" + user + "&pass=" + pass;
+return queryString;
+}
+function doRequestUsingPOST() {
+createXMLHttpRequest();
+var url = "GetAndPostExample?timeStamp=" + new Date().getTime();
+var queryString = createQueryString();
+xmlHttp.open("POST", "login.jsp", true);
+xmlHttp.onreadystatechange = handleStateChange;
+xmlHttp.setRequestHeader("Content-Type",
+"application/x-www-form-urlencoded;");
+xmlHttp.send(queryString);
+}
+
+function handleStateChange() {
+if(xmlHttp.readyState == 4) {
+if(xmlHttp.status == 200) {
+document.getElementById("serverResponse").innerHTML = xmlHttp.responseText;
+alert(xmlHttp.responseText);
+}
+}
+}
+
+
+</script>
+</body>
+
+</html>
+
+<form >
+
+
+
+<div class="container">
+    <form>       
+      <h2 class="form-signin-heading">Welcome, Please Login</h2>
+      <input type="text" id="user"name="username" placeholder="Username" required=""/>
+      <input type="password" id="pass"name="password" placeholder="Password" required=""/>      
+      
+      <button class="btn btn-lg btn-primary btn-block" onClick ="doRequestUsingGET()" type="submit">Login</button>  
+		
+		<p> <a href="register_01.jsp">Click Here</a> to join now. </p>
+    </form>
+  </div>
+  <div id="responseDiv"></div>
+</form>
+
+
+
+
+
+<html>
+<head>
+	<title>CSE220 Final Project</title>
+</head>
+
+<body>
+<center>
+
+<form method='POST' action='login.jsp'>
+<table border=1 cellpadding=5 cellspacing=5 width="796">
+<tr>
+   <td colspan="4" width="768">
+   <img src='images/top.jpg' width="768" height="253"></td>
+</tr>
+
+<tr>
+   <td width="118">User Name: </td>
+   <td width="161" align="center">
+   <input type=text name="user" size="20" tabindex="1"></td>
+   <td rowspan="2" width="137" align="center">
+   <input type=submit value="Member Login" size="20" tabindex="3"></td>
+   <td rowspan="2" width="334" align="right">
+      Millions of member profiles.<br>
+      Thousands more joining each day.<br>
+      <a href="register_01.jsp">Click Here</a> to join now. 
+   </td>
+</tr>
+
+<tr>
+   <td width="118">Password:&nbsp; &nbsp; </td>
+   <td width="161" align="center">
+   <input type=password name="password" size="20" tabindex="2"></td>
+</tr>
+
+</table>
+</form>
+
+</center>
+</body>
+</html>

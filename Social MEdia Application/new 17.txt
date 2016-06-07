@@ -1,0 +1,7 @@
+<p>Question1 : Which statement is not true about ServletConfig?</p>
+<ol>
+<li><input type='radio' name="question1" value="There is One Servlet Config Per App" />There is One Servlet Config Per App</li>
+<li><input type='radio' name="question1" value="We Can Access Servlet COnfig through it" />We Can Access Servlet COnfig through it</li>
+<li><input type='radio' name="question1" value="provide deploy-time info to server" />provide deploy-time info to server</li>
+<li><input type='radio' name="question1" value="There is One Servlet Config Per Servlet" />There is One Servlet Config Per Servlet</li>
+</ol>

@@ -1,0 +1,8 @@
+this.databaseMap = new HashMap<>();
+		for (Entry<String, Integer> entry : databaseMap.entrySet()) {
+			this.databaseMap.put(entry.getKey(), entry.getValue());
+		}
+		this.valueConterMap = new HashMap<>();
+		for (Entry<Integer, Set<String>> entry : valueCounterMap.entrySet()) {
+			this.valueConterMap.put(entry.getKey(), entry.getValue());
+		}	

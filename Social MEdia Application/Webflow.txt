@@ -1,0 +1,12 @@
+Spring WebFlow
+
+Controller{
+//some logic
+return "view1";
+}
+view1<%
+//Disp;ay model
+<a href="controller1.htm">PrePage</a>
+<a href="controller2.htm">next page</a>
+<a href="home.htm">Home Page</a>
+<a href="cancel.htm">Cancel Order</a>

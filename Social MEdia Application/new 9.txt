@@ -1,0 +1,58 @@
+1) What is constructor in Java?
+2) What is the purpose of default constructor?
+3) Does constructor return any value?
+4)Is constructor inherited?
+5) Can you make a constructor final?
+6) What is static variable?
+7) What is static method?
+8) Why main method is static?
+9) What is static block?
+10)What is difference between static (class) method and instance method?
+11) What is this in java?
+12)What is Inheritance?
+13) Which class is the superclass for every class.
+14) Is multiple inheritance is supported in java?why?
+15) What is super in java?
+16)What is method overloading?
+17) Can we overload main() method?
+18) What is method overriding:
+19) Can we override static method?Why not?
+20) Difference between method Overloading and Overriding.
+21) What is final variable/final method/final class?
+22) Can you declare the main method as final?
+23) What is Runtime Polymorphism?
+24) What is abstraction?
+25) What is the difference between abstraction and encapsulation?
+26) What is abstract class?
+27) Can there be any abstract method without abstract class?
+28) Can you use abstract and final both with a method?
+29) Is it possible to instantiate the abstract class?
+30) What is interface?
+31) Can you declare an interface method static?
+32) Can an Interface be final?
+33) What is difference between abstract class and interface?
+34) Can we define private and protected modifiers for variables in interfaces?
+35) What is package?
+36) What is Exception Handling?
+37) What is difference between Checked Exception and Unchecked Exception?
+38) What is difference between throw and throws?
+39) What is finally block?
+40) What is the meaning of immutable in terms of String?
+41) Why string objects are immutable in java?
+42) How many ways we can create the string object?
+43) What is the difference between String, StringBuffer and StringBuilder ?
+44) How can we create immutable class in java ?
+45) What is the purpose of toString() method in java ?
+46) How can we create immutable class in java ?
+47) What is the purpose of toString() method in java ?
+48) What is Garbage Collection?
+49) What is the purpose of finalize() method?
+50) What is difference between final, finally and finalize?
+51) Can you access the private method from outside the class?
+52) What is singleton class?
+53) What do you mean by Access Modifier? Types?
+54) Explain Singleton Pattern? Basic conditions required to achieve it?
+55) What is an enumeration?
+56) What is Downcasting?
+57) What is type casting in Java?
+58) Give examples of Data encapsulation, Polymorphism and inheritance used in your project? 
