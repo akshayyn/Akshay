@@ -5,4 +5,4 @@ Designed and Developed a Spring MVC based Job Portal application
 
 2. Web base social media application
   Designed and developed a MVC based web application hosted on Apache Tomcat Server with focus on providing rich user experience using HTML5, CSS, Bootstrap, jQuery and AJAX
-ï‚· Performed schema design and relational mapping for the backend Database using MySQL workbench.
+ ‚· Performed schema design and relational mapping for the backend Database using MySQL workbench.
